@@ -14,6 +14,7 @@ var imageUrls = [
   'images/black.jpg',
   'images/tatema.jpg',
   'images/frida.jpg',
+  'images/fixcel.jpg',
   // Agrega más imágenes aquí
 ];
 
@@ -104,12 +105,12 @@ document.addEventListener('DOMContentLoaded', initSlider);
 		</div>
 	</header>
 	<div class="mt-3 col-12 bg-warning d-flex justify-content-center">
-		<div class="col-11 bg-danger">
-		<div id="slider-container">
-  <div id="prev-arrow">&#8249;</div>
-  <img id="slider-image" src="" alt="Slider Image">
-  <div id="next-arrow">&#8250;</div>
-</div>
+		<div class="col-11">
+			<div id="slider-container" class="d-flex col-12">
+  				<div id="prev-arrow" class="col-2 bg-danger"><img class="arrowIcon" src="images/lftarrow.png" ></div>
+  				<img id="slider-image" class="col-8" src="" alt="Slider Image">
+  				<div id="next-arrow " class="col-2 bg-danger"><img class="arrowIcon" src="images/rgtarrow.png" ></div>
+			</div>
 		</div>
 	</div>
 </body>
