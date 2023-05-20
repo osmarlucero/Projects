@@ -1,0 +1,94 @@
+Trabajo 9:
+fun main(args: Array<String>) {
+    var edad = args[0].toInt()
+
+    when (edad) {
+        in 0..5 -> "Infancia"
+        in 6..11 -> "Niñez"
+        in 12..19 -> "Adolescencia"
+        in 20..30 -> "Juventud"
+        in 31..59 -> "Adultez"
+        in 60..120 -> "Ancianidad"
+        else -> "Edad inválida"
+    }
+}
+
+trabajo 10:
+fun evaluar(calificacion: Int): String {
+    return when (calificacion) {
+        in 0..59 -> "Insuficiente"
+        in 60..69 -> "Suficiente"
+        in 70..79 -> "Regular"
+        in 80..89 -> "Muy Bien"
+        in 90..100 -> "Excelente"
+        else -> "Calificación inválida"
+    }
+}
+
+fun aprobatorio(calificacion: Int): String {
+    return when (calificacion) {
+        in 0..59 -> "No aprobado"
+        in 60..100 -> "Aprobado"
+        else -> "Calificación inválida"
+    }
+}
+
+fun main(args: Array<String>) {
+    var calificacion = args[0].toInt()
+    println( evaluar(calificacion) )
+    println( aprobatorio(calificacion) )
+    
+}
+
+Trabajo 11:
+fun main(args: Array<String>) {
+    val x = args[0]
+    val resultado = when (x) {
+        "hola" -> "bienvenido"
+        "adios" -> "bienvenido"
+        "la cadena contiene hola" -> "hola mundo!"
+        "saludar" -> "enviamos saludos pariente"
+        "" -> "silencio"
+        else -> "no podemos entender que quiere"
+    }
+    println("$x - $resultado")
+}
+
+Trabajo 12:
+fun main(args: Array<String>) {
+    val nums = args.map { it.toInt() }
+
+    var suma = 0
+    for (num in nums) {
+        suma += num
+    }
+
+    val promedio = suma.toDouble() / nums.size
+
+    println("Números: ${nums.joinToString(" ")}")
+    println("Suma: $suma")
+    println("Promedio: $promedio")
+}
+
+Trabajo 13:
+fun main(args: Array<String>) {
+    val nums = args.map { it.toInt() }
+
+    var menor = Int.MAX_VALUE
+    var mayor = Int.MIN_VALUE
+
+    for (num in nums) {
+        if (num < menor) {
+            menor = num
+        }
+        if (num > mayor) {
+            mayor = num
+        }
+    }
+
+    println("Números: ${nums.joinToString(" ")}")
+    println("Valor Menor: $menor")
+    println("Valor Mayor: $mayor")
+}
+
+
